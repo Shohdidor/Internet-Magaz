@@ -1,0 +1,310 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.glava{
+    background-color: black;
+    padding: 4%;
+}
+.glava:hover{
+    transition: 0.2s;
+    background-color: rgba(0, 0, 0, 0.437);
+}
+li:hover{
+    transition: 0.2s;
+    font-size: 110%;
+    text-decoration: underline;
+    color: orangered;
+}
+li{
+    cursor: pointer;
+}
+.title {
+    font-size: 200%;
+    font-weight: 700;
+    color: rgba(245, 222, 179, 0.657);
+}
+
+button{
+    background-color: #353432;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.container{
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform.5s;
+}
+
+svg{
+    width: 30px;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+header .icon-cart{
+    position: relative;
+}
+
+header .icon-cart span{
+    width: 25px;
+    display: flex;
+    height: 25px;
+    background-color: red;
+    justify-content: center;
+    align-items:center;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    right:-20px
+}
+
+.listProduct .item img{
+    width: 90%;
+    border-radius: 3px;
+    filter: drop-shadow(0 10px 10px #0009);
+}
+
+.listProduct img{
+    width: 50%;
+    border-radius: 3px;
+    filter: drop-shadow(0 10px 10px #0009);
+}
+
+.listProduct{
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        justify-content: space-evenly;
+        gap:20px
+}
+
+.listProduct .item {
+    background-color: rgba(0, 0, 0, 0.501);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+.listProduct h2{
+    font-weight: 500;
+    font-size: large;
+}
+
+
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+
+
+.listProduct .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+
+
+.listProduct .item button{
+    background-color: #353432;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cartTab{
+    width: 400px;
+    background-color: #353432;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+
+body.showCart .container{
+    transform: translateX(-250px);
+}
+
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat( 2 , 1fr );
+}
+
+.cartTab .btn button:hover{
+    transition: 0.2s;
+    background-color: purple;
+}
+
+
+.cartTab .btn button{
+    border-radius: 1px;
+    background-color: yellow;
+    border: none;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cartTab .btn .close{
+    color: black;
+    background-color: white;
+}
+
+.cartTab .listCart .item img{
+    width: 100%;
+}
+
+.cartTab .listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: white;
+}
+
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+
+.listCart{
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
+
+.vapour {
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.vapour span {
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    margin-top: -2%;
+    margin-left: 9%;
+    min-width: 8px;
+    height: 120px;
+    background:red;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    opacity: 0;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * -0.5s )
+}
+
+.Animation{
+    transition: 0.5s;
+}
+.Migat{
+    animation: mig 3s linear infinite;
+}
+@keyframes mig {
+    0%{
+    }
+    20%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    100%{
+    }
+}
+
+.SpiderMan{
+    animation: spider 5s linear infinite;
+}
+
+@keyframes spider {
+    0%{
+        margin-top: -70%;
+    }
+    15%{
+        margin-top: -30%;
+    }
+    25%{
+        margin-top: 0%;
+    }
+    50%{
+        margin-top: 0%;
+    }
+    100%{
+        margin-top: -70%;
+    }
+
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0)scaleX(1);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-150px)scaleX(5);
+    }
+    95%{
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-300)scaleX(10);
+    }
+}

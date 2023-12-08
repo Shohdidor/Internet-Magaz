@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+</head>
+<body>
+
+    <dialog class="PostDialog">
+        <input type="file" class="inpPost1">
+        <input type="text" class="inpPost2">
+        <input type="text" class="inpPost3">
+        <button class="Post2" style="margin-top: -2%; cursor: pointer; border: none; height: 5vh; padding-inline: 10%; background-color: rgba(0, 0, 0, 0.718); color: white; font-weight: 600; border-radius: 9px;"> Post </button>
+    </dialog>
+
+    <dialog class="AvatarDig">
+        <img class="imgEdit">
+        <input type="file" class="inpChange">
+        <button class="EditAvatar"> Change Me </button>
+    </dialog>
+
+    <dialog class="Edit">
+        <button class="ED" style="cursor: pointer; padding: 1%; padding-inline: 6%; border: none; background-color: lawngreen; font-weight: 700; border-radius: 5px; margin-left: 32%; margin-top: 7%;"> Edit </button>
+        <input type="text" class="inpEdit2" style="padding: 0.5%; background-color: lightcoral; color: white; font-weight: 700; border: 1px solid rgba(0, 0, 0, 0.62); border-radius: 2px; padding-inline: 2%; margin-left: 2%;">
+        <input type="text" class="inpEdit3"  style="padding: 0.5%; background-color: lightcoral; color: white; font-weight: 700; border: 1px solid rgba(0, 0, 0, 0.62); border-radius: 2px; margin-left: 2%;padding-inline: 2%">
+        <img class="inpEdit1" style="width: 20%; margin-top: -10%;">
+     
+    </dialog>
+
+    <div style="font-family: sans-serif; background-color: rgba(0, 0, 0, 0.38); padding: 2%; width: 96%; text-align: center; display: flex;">
+        <img class="avatar" src="/Joker.jpeg" alt="error" style="width: 15%; border-radius: 50%;">
+        <div style=" margin-left: 3%; text-align: left; margin-top: 2%; font-size: 110%;">
+            <h1 style="font-weight: 100;">
+                User8
+            </h1>
+            <h2 style="font-weight: 100; margin-top: 1.6%;">
+                user8@gmail.com
+            </h2>
+            <input type="file" style="height: 2.9vh;margin-left: -5%;" class="fail">
+            <button class="Change" style="margin-left: 75%; cursor: pointer; border: none; height: 5vh; padding-inline: 10%; background-color: rgba(0, 0, 0, 0.718); color: white; font-weight: 600; border-radius: 9px;"> Change </button>
+        </div>
+        <a href="http://127.0.0.1:5500/index2.html" style="color: white; text-decoration: none; margin-left: 55%; margin-top: 10%;">
+            <button style="margin-left: -100%; margin-top: -2%; cursor: pointer; border: none; height: 5vh; padding-inline: 100%; background-color: rgba(0, 0, 0, 0.718); color: white; font-weight: 600; border-radius: 9px;"> Back </button>
+        </a>
+    </div>
+    <button class="Post" style="margin-left: 45%; margin-top: 2%; cursor: pointer; border: none; height: 5vh; padding-inline: 5%; background-color: rgba(0, 0, 0, 0.718); color: white; font-weight: 600; border-radius: 9px;"> Post </button>
+    <br>
+    <br>
+    <hr color="gray" style="box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.598);">
+    <table style="margin-top: 2%;">
+        <thead style="font-family: sans-serif;">
+            <tr>
+                <th>
+                    Img
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+
+                </th>
+            </tr>
+        </thead>
+
+        <tbody class="tbody" style="font-family: sans-serif;"></tbody>
+
+
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="your Profile.js"></script>
+</body>
+</html>

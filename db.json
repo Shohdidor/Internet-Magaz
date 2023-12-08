@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Model 1",
+      "price": "$200",
+      "image": "kofta.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Model 2",
+      "price": "$200",
+      "image": "Shirts.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Model 3",
+      "price": "$200",
+      "image": "NIke.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Model 4",
+      "price": "$200",
+      "image": "kofta.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Model 4",
+      "price": "$200",
+      "image": "NIke.jpeg"
+    }
+  ],
+  "post": [
+    {
+      "image": "http://127.0.0.1:5500/NIke.jpeg",
+      "name": "Nike",
+      "price": "$49",
+      "id": 1
+    }
+  ]
+}
