@@ -14,9 +14,17 @@ let inpPost1 = document.querySelector(".inpPost1");
 let inpPost2 = document.querySelector(".inpPost2");
 let inpPost3 = document.querySelector(".inpPost3");
 let Post2 = document.querySelector(".Post2");
+let Close2 = document.querySelector(".Close2");
+let EDclose = document.querySelector(".EDclose");
 
 Post.onclick = () => {
   PostDialog.showModal()
+};
+Close2.onclick = () => {
+  PostDialog.close()
+};
+EDclose.onclick = () => {
+  Edit.close()
 };
 
 Post2.onclick =  PostUser
@@ -110,31 +118,15 @@ function get(data) {
 
     let td4 = document.createElement("td");
     let btnDel = document.createElement("button");
-    btnDel.innerHTML = "Del";
-    btnDel.style.cursor = "pointer";
-    btnDel.style.border = "none";
-    btnDel.style.height = "5vh";
-    btnDel.style.paddingInline = "10%";
-    btnDel.style.backgroundColor = "rgba(0, 0, 0, 0.718)";
-    btnDel.style.color = "white";
-    btnDel.style.fontWeight = "600";
-    btnDel.style.borderRadius = "9px";
+    btnDel.classList.add("btndel");
+    btnDel.innerHTML = "Delete";
     btnDel.onclick = () => {
       deleteUser(elem.id);
     };
 
     let btnEdit = document.createElement("button");
     btnEdit.innerHTML = "Edit";
-    btnEdit.style.marginTop = "5%";
-    btnEdit.style.marginLeft = "2%";
-    btnEdit.style.cursor = "pointer";
-    btnEdit.style.border = "none";
-    btnEdit.style.height = "5vh";
-    btnEdit.style.paddingInline = "10%";
-    btnEdit.style.backgroundColor = "rgba(0, 0, 0, 0.718)";
-    btnEdit.style.color = "white";
-    btnEdit.style.fontWeight = "600";
-    btnEdit.style.borderRadius = "9px";
+    btnEdit.classList.add("btnEdit");
     btnEdit.onclick = () => {
       editOpen(elem);
     };
@@ -143,9 +135,13 @@ function get(data) {
     td4.style.textAlign = "center";
 
     td4.append(btnDel, btnEdit);
-
+    
     tr.append(td, td2, td3, td4);
-    tr.style.boxShadow = " 0px 5px 40px 0px gray"
+    td.style.borderBottom="1px solid black";
+    td2.style.borderBottom="1px solid black";
+    td3.style.borderBottom="1px solid black";
+    td4.style.borderBottom="1px solid black";
+    // tr.style.boxShadow = " 0px 5px 40px 0px gray"
     tbody.appendChild(tr);
   });
 }

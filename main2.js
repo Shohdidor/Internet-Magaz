@@ -42,7 +42,7 @@ Settings.onclick = () => {
         dialogSettings.style.marginLeft = "0%"
     }
     else { 
-        dialogSettings.style.marginLeft = "-30%"   
+        dialogSettings.style.marginLeft = "-50%"   
     }
 }
 
@@ -69,8 +69,9 @@ closeCart.onclick = () =>{
     body.classList.toggle ("showCart")
 }
 
-let api = "http://localhost:3000/data"
 
+
+let api = "http://localhost:3000/data"
 
 async function getData () {
     try {
@@ -91,6 +92,7 @@ function get ( data ) {
         let IMG = document.createElement ( "img" )
         IMG.src = elem.image
         IMG.style.width="100%"
+
         let Name = document.createElement ( "h2" )
         Name.innerHTML = elem.name
         let Price = document.createElement ( "h2" )
@@ -122,7 +124,7 @@ function get ( data ) {
     })
 }
 
-async function addUser (elem) {
+function addUser (elem) {
     let div = document . createElement ("div")
     let div2 = document . createElement ("div")
 
@@ -172,9 +174,6 @@ async function addUser (elem) {
     
     btnplus.onclick = () => {
         cnt ++
-        if ( cnt < 0 ){
-            cnt = 0
-        }
         sum.innerHTML = cnt
     }
     let btnDel = document . createElement ( "button" )
@@ -193,5 +192,3 @@ async function addUser (elem) {
     div . append ( IMG , div2 , btnminus , sum , btnplus , btnDel)
     listCartHTML.appendChild ( div )
 }
-
-

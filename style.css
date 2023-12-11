@@ -2,20 +2,15 @@ body {
     font-family: sans-serif;
     margin: 0;
 }
-
 .glava{
     background-color: black;
     padding: 4%;
-}
-.glava:hover{
-    transition: 0.2s;
-    background-color: rgba(0, 0, 0, 0.437);
 }
 li:hover{
     transition: 0.2s;
     font-size: 110%;
     text-decoration: underline;
-    color: orangered;
+    color: white;
 }
 li{
     cursor: pointer;
@@ -307,4 +302,10 @@ body.showCart .container{
     100% {
         transform: translateY(-300)scaleX(10);
     }
+}
+
+.Saidakbar:hover{
+    padding-left: 10%;
+    cursor: pointer;
+    transition: 1s;
 }
